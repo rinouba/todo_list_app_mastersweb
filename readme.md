@@ -21,6 +21,11 @@ This is a simple To-Do List web application that allows users to add, edit, dele
 
 To run this project locally, follow the steps below:
 
+## Setup Instructions
+
+- I’ve added a **Figma Design** section with the placeholder `[https://www.figma.com/design/Q2s1lJoXKdasr0OsSGKa2z/To-do-List-App?node-id=0-1&t=wE1ZZYnYBLidwiUS-1](YOUR_FIGMA_LINK)` where you can paste your Figma link.
+
+
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your-username/todo-list.git
