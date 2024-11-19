@@ -1,0 +1,276 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+  --background_color_body: #E55C8A;
+  --background_color_body_2: #F06292;
+  --background_color_main: #3C424A;
+  --background_input: #343A40;
+  --background_check_box: #484F59;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 91vh;
+  background: linear-gradient(160deg, var(--background_color_body_2) 50%, var(--background_color_body) 50%);
+}
+
+/* main */
+
+main{
+  background-color: var(--background_color_main);
+  border-radius: 13px;
+  width: 45%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 30px 80px;
+}
+
+h1{
+  text-align: center;
+  color: white;
+}
+
+/* form */
+
+form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8%;
+  width: 100%;
+}
+
+form input[type="text"],.input_edited{
+  all: unset;
+  background-color: var(--background_input);
+  width: 75%;
+  padding: 10px;
+  border-radius: 3px;
+  color: var(--background_color_body_2);
+}
+
+.input_edited{
+  padding: 5px;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: all 1s;
+}
+
+form input[type="button"],button{
+  all: unset;
+  background-color: var(--background_input);
+  padding: 10px;
+  width: 25%;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+form input[type="button"]:hover,button:hover{
+  background-color: var(--background_color_body);
+  color: #343A40;
+  padding: 8px 1.4rem;
+}
+
+/* list todos */
+ul{
+  list-style: none;
+  margin-top: 10%;
+}
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+
+li h5{
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: normal;
+  width: 100%;
+}
+
+.buttons_edit_delete{
+  display: flex;
+}
+
+.buttons_edit_delete button:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.div_inside_li{
+  display: flex;
+  width: 60%;
+}
+/* check box */
+.checkbox{
+	display:flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: row-reverse;
+	font-size: 14px;
+	cursor: pointer;
+  margin-right: 10px;
+}
+.checkbox input{
+	display:none;
+	width: 0;
+	height: 0;
+}
+.checkbox span{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	margin-right: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2%;
+	background-color: var(--background_check_box);
+}
+.checkbox input:checked + span:after{
+	content: "\2713";
+	display: block;
+	width: 17px;
+	height: 27px;
+	font-size: 20px;
+	color: #ffffff;
+}
+.checkbox input:checked + span {
+	background-color: var(--background_check_box);
+}
+.checkbox input:disabled + span {
+	background-color: #e5e5e5;
+}
+.checkbox span:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	border-radius: 2%;
+	background-color: var(--background_color_body);
+}
+.checkbox input:checked + span:before {
+	animation: growAndFade 0.2s ease-out;
+} 
+@keyframes growAndFade {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.5;
+		transform: scale(1.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+/* buttons for li */
+
+button{
+  padding: 7px 15px;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+button:hover{
+  padding: 5px 0.8rem;
+}
+
+.active{
+  opacity: 1;
+}
+
+/* notification message */
+
+.notification_message{
+  position: absolute;
+  padding: 10px 35px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  bottom: 5%;
+  right: 5%;
+  width: 25%;
+  transition: all 3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+/*
+===============================
+      making it responsive
+================================
+*/
+
+
+@media(max-width:1300px) {
+  main{
+    width: 95%;
+    padding: 20px;
+  }
+  form input[type="button"]{
+    margin-left: 10px;
+    padding: 10px 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  button{
+    transform: scale(0.9);
+  }
+
+  .checkbox{
+    font-size: 0.2rem;
+  }
+
+  button:hover{
+    background-color: var(--background_color_body);
+    color: #343A40;
+  }
+  li h5{
+    font-size: 0.9rem;
+  }
+  .notification_message{
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+    width: 50%;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+/* for phone */
+@media (max-width:600px) {
+  main h1{
+    font-size: 1.3rem;
+  }
+
+  form{
+    width: 95%;
+  }
+
+  li h5{
+    font-size: 0.8rem;
+  }
+
+  button{
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
