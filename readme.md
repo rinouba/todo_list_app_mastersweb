@@ -2,6 +2,10 @@
 
 This is a simple To-Do List web application that allows users to add, edit, delete, and mark tasks as completed. It is built using HTML, CSS, and JavaScript. The tasks are stored in the browser's localStorage, so they persist even after refreshing the page.
 
+**Figma Design**
+Here is my design i made for this To-Do List :
+`[here](https://www.figma.com/design/Q2s1lJoXKdasr0OsSGKa2z/To-do-List-App?node-id=0-1&t=wE1ZZYnYBLidwiUS-1)`
+
 ## Features
 
 - **Add Tasks**: Users can add new tasks to their to-do list.
@@ -20,10 +24,6 @@ This is a simple To-Do List web application that allows users to add, edit, dele
 ## Setup Instructions
 
 To run this project locally, follow the steps below:
-
-## Setup Instructions
-
-- I’ve added a **Figma Design** section with the placeholder `[here](https://www.figma.com/design/Q2s1lJoXKdasr0OsSGKa2z/To-do-List-App?node-id=0-1&t=wE1ZZYnYBLidwiUS-1)` where you can paste your Figma link.
 
 
 1. **Clone the repository**:
